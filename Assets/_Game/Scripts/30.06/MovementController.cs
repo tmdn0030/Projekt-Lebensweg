@@ -191,6 +191,52 @@ public class MovementController : MonoBehaviour
             }
         }
 
+        // --- BASIS-SPEED, mit dem du die Zonen ursprünglich getestet hast ---
+        const float baseSpeed = 0.05f; // dein alter Standardwert beim Testen
+
+        if (matchingZone != null && matchingZone != activeZone)
+        {
+            if (scrollSpeedCoroutine != null) StopCoroutine(scrollSpeedCoroutine);
+
+            // Umrechnung: Absoluter SpeedZone-Wert → Multiplikator relativ zu baseSpeed
+            float speedMultiplier = matchingZone.newScrollSpeed / baseSpeed;
+
+            // Zielwert: aktueller Scrollspeed (Slider) * Multiplikator
+            float targetSpeed = initialScrollSpeed * speedMultiplier;
+
+            scrollSpeedCoroutine = StartCoroutine(ChangeScrollSpeedSmoothly(
+                targetSpeed, matchingZone.easeDuration, matchingZone.ease));
+
+            activeZone = matchingZone;
+        }
+        else if (matchingZone == null && activeZone != null && activeZone.resetOnExit)
+        {
+            if (scrollSpeedCoroutine != null) StopCoroutine(scrollSpeedCoroutine);
+            float resetTo = activeZone.defaultSpeed > 0 ? activeZone.defaultSpeed : initialScrollSpeed;
+            scrollSpeedCoroutine = StartCoroutine(ChangeScrollSpeedSmoothly(
+                resetTo, activeZone.resetEaseDuration, activeZone.resetEase));
+            activeZone = null;
+        }
+    }
+
+
+    /*
+    private void HandleSpeedZones(float totalLength)
+    {
+        SpeedZone matchingZone = null;
+        foreach (var zone in speedZones)
+        {
+            if (zone == null || zone.spline != splineDolly.Spline) continue;
+            float start = Mathf.Clamp(zone.startDistance, 0, totalLength);
+            float end = Mathf.Clamp(zone.endDistance, start, totalLength);
+
+            if (currentDistance >= start && currentDistance <= end)
+            {
+                matchingZone = zone;
+                break;
+            }
+        }
+
         if (matchingZone != null && matchingZone != activeZone)
         {
             if (scrollSpeedCoroutine != null) StopCoroutine(scrollSpeedCoroutine);
@@ -208,6 +254,8 @@ public class MovementController : MonoBehaviour
         }
     }
 
+    */
+
     private void HandleAnimationZones()
     {
         if (animationZones == null) return;
@@ -217,6 +265,8 @@ public class MovementController : MonoBehaviour
             zone.ScrubAnimation(currentDistance);
         }
     }
+
+    
 
     // ---------------- Helpers ----------------
 
@@ -257,6 +307,7 @@ public class MovementController : MonoBehaviour
             sum += touches[i].screenPosition;
         return sum / touches.Count;
     }
+    
 
     // ---------------- Input (Windows Touch + Maus) ----------------
 
@@ -489,6 +540,9 @@ public class MovementController : MonoBehaviour
     }
 
 }
+
+
+
 
 
 

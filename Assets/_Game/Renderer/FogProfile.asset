@@ -245,7 +245,7 @@ MonoBehaviour:
     m_Value: 25.36
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 14.5
+    m_Value: 27.3
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -356,10 +356,10 @@ MonoBehaviour:
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: -0
   saturation:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 14.4
 --- !u!114 &-2874522029353964499
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -400,7 +400,7 @@ MonoBehaviour:
     m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.45
+    m_Value: 0.56
   intensity:
     m_OverrideState: 1
     m_Value: 1
