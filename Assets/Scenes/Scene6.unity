@@ -7228,13 +7228,15 @@ GameObject:
   - component: {fileID: 62706904}
   - component: {fileID: 62706903}
   - component: {fileID: 62706902}
+  - component: {fileID: 62706906}
+  - component: {fileID: 62706905}
   m_Layer: 0
   m_Name: Curve.040
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &62706902
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7303,6 +7305,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90.149, y: -38.58899, z: -0.88201904}
+--- !u!114 &62706905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62706899}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4b650dee9d6a04c95ecd30a570caaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splineContainer: {fileID: 1113060108}
+  dolly: {fileID: 453898848}
+  triggerOffset: -1.66
+  revealRadius: 5
+  animationStateName: Dissolve1
+--- !u!95 &62706906
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62706899}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b1384331d8a64748b44bb79a365712b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &71000499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7837,7 +7878,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du hast gl\xFCck in der Logistik \narbeiten zu d\xFCrfen, Soldat!"
+  m_text: "Du hast Gl\xFCck in der Logistik \narbeiten zu d\xFCrfen Soldat!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10099,7 +10140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Es kacht laut, dann wird \ndir schwarz vor Augen"
+  m_text: "Es kracht laut, dann wird \ndir schwarz vor Augen"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16179,7 +16220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ein toter und vier verletzte...
+  m_text: 'Ein Toter und vier Verletzte...
 
 '
   m_isRightToLeft: 0
@@ -19644,7 +19685,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Die Polizei will dich und vier \nweitere Eritrea registrieren..."
+  m_text: "Die Polizei will dich und vier \nweitere Eritreer registrieren..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21849,18 +21890,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402212548}
-  m_LocalRotation: {x: 0.06942326, y: 0.9499629, z: -0.062101893, w: 0.29815152}
-  m_LocalPosition: {x: 0, y: 0, z: 45.6}
+  m_LocalRotation: {x: 0.07358204, y: 0.926877, z: -0.0571132, w: 0.36362445}
+  m_LocalPosition: {x: 0, y: 0, z: 42.53}
   m_LocalScale: {x: 0.0017, y: 0.0017000001, z: 0.0017}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 247841408}
   - {fileID: 312888240}
   m_Father: {fileID: 1798459712}
-  m_LocalEulerAnglesHint: {x: 9.171, y: 145.593, z: 5.514}
+  m_LocalEulerAnglesHint: {x: 9.171, y: 137.601, z: 5.514}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 211.48, y: 7.43}
+  m_AnchoredPosition: {x: 212.15, y: 7.03}
   m_SizeDelta: {x: 811, y: 508.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &402212550
@@ -22026,7 +22067,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Nord-Westlich von Sudan,
 
-    Grenzt am Mittelmeer'
+    Grenzt an das Mittelmeer'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -30773,7 +30814,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Anhalter helfen euch, du \nwachst im Auto auf und\nbekommst kaum Luft."
+  m_text: "Anhalter helfen euch. Du \nwachst im Auto auf und\nbekommst kaum Luft."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31412,8 +31453,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Seit du denken kannst herrscht hier Krieg. In der Ferne h\xF6rt man es
-    knallen und es liegt ein verbrannter Geruch in der Luft."
+  m_text: "Seit du Denken kannst herrscht hier Krieg. In der Ferne h\xF6rt man es
+    Knallen und es liegt ein verbrannter Geruch in der Luft."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -45835,7 +45876,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du hast kein Geld, keine M\xF6glichkeiten...\nund kannst nur auf die hilfe
+  m_text: "Du hast kein Geld, keine M\xF6glichkeiten...\nund kannst nur auf die Hilfe
     anderer hoffen"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -47644,7 +47685,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"Ich sende sofort 200\u20AC?\""
+  m_text: '"Ich sende dir 200$, okay?"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -47930,7 +47971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: und dann eines Tages fallen Bomben auf euer Haus.
+  m_text: Eines Tages... fallen Bomben
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -49776,14 +49817,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6845372964647519049, guid: 48f86465cb9503c439ed748506c08bab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5988864474683957083, guid: 48f86465cb9503c439ed748506c08bab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d93f6a3695b81914f8f4730c425c2b79, type: 2}
+    - target: {fileID: -2130101987629011439, guid: 48f86465cb9503c439ed748506c08bab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -74190570699924520, guid: 48f86465cb9503c439ed748506c08bab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bea389aca25d2a9459e9fa4923906ef9, type: 2}
     - target: {fileID: 919132149155446097, guid: 48f86465cb9503c439ed748506c08bab, type: 3}
       propertyPath: m_Name
       value: Haus Blender 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1513771085810929158, guid: 48f86465cb9503c439ed748506c08bab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d93f6a3695b81914f8f4730c425c2b79, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -2130101987629011439, guid: 48f86465cb9503c439ed748506c08bab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1620548718}
+    - targetCorrespondingSourceObject: {fileID: -2130101987629011439, guid: 48f86465cb9503c439ed748506c08bab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1620548717}
   m_SourcePrefab: {fileID: 100100000, guid: 48f86465cb9503c439ed748506c08bab, type: 3}
 --- !u!1 &991222313
 GameObject:
@@ -53754,7 +53821,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Deine Tante hilft dir \neinen Fahrer zu finden, der \ndich nach Kahrtoum
+  m_text: "Deine Tante hilft dir \neinen Fahrer zu finden, der \ndich nach Khartoum
     bringt"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -57424,18 +57491,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137577934}
-  m_LocalRotation: {x: 0.07572743, y: 0.86923534, z: -0.06355467, w: 0.4844132}
-  m_LocalPosition: {x: 0, y: 0, z: 49.9}
+  m_LocalRotation: {x: 0.060289387, y: 0.75642973, z: -0.07859707, w: 0.6465305}
+  m_LocalPosition: {x: 0, y: 0, z: 46.5}
   m_LocalScale: {x: 0.0017, y: 0.0017000001, z: 0.0017}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 82032836}
   - {fileID: 1608017121}
   m_Father: {fileID: 1798459712}
-  m_LocalEulerAnglesHint: {x: 10.594, y: 122.119, z: 4.088}
+  m_LocalEulerAnglesHint: {x: 11.354, y: 98.898, z: -0.609}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 214.2, y: 7.6}
+  m_AnchoredPosition: {x: 218, y: 6.9}
   m_SizeDelta: {x: 811, y: 508.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1137577936
@@ -58209,7 +58276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Die verletzten so wie du, \nw\xFCrden ertrinken bevor Hilfe \neintreffen
+  m_text: "Die Verletzten so wie du, \nw\xFCrden ertrinken bevor Hilfe \neintreffen
     kann"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -62968,7 +63035,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "...Die Fleischwunde an deiner \nH\xFCfte sieht schlimm aus und man \nwei\xDF
-    nicht ob du noch am leben bist"
+    nicht ob du noch am Leben bist"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -75606,7 +75673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1588035986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -77282,6 +77349,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619222816}
   m_CullTransparentMesh: 1
+--- !u!1 &1620548714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2130101987629011439, guid: 48f86465cb9503c439ed748506c08bab, type: 3}
+  m_PrefabInstance: {fileID: 990378868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1620548717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620548714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4b650dee9d6a04c95ecd30a570caaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splineContainer: {fileID: 1113060108}
+  dolly: {fileID: 453898848}
+  triggerOffset: 0
+  revealRadius: 5
+  animationStateName: GateOpenR
+--- !u!95 &1620548718
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620548714}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68901e43876117e4589b5247f5322278, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1630889480
 GameObject:
   m_ObjectHideFlags: 0
@@ -77828,7 +77939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Du bist in einer \xFCberf\xFCllten Fl\xFCchtlingsunterkunft, zum Hinlegen
+  m_text: "Du bist in einer \xFCberf\xFCllten Fl\xFCchtlingsunterkunft und zum Hinlegen
     ist kaum Platz."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -80407,7 +80518,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1734025076
 GameObject:
   m_ObjectHideFlags: 0
@@ -87455,7 +87566,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ihr maschiert durch die W\xFCste nach Sahelzone, die Reise ist hart"
+  m_text: "Ihr maschiert durch die W\xFCste der Sahelzone, die Reise ist hart"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -93548,7 +93659,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "...doch als Fl\xFCchtlich hat man \nkeine Perspektive in Italien"
+  m_text: "...doch als Fl\xFCchtling hat man \nkeine Perspektive in Italien"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

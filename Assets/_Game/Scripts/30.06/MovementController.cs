@@ -514,7 +514,7 @@ public class MovementController : MonoBehaviour
 
 
     // ---------------- Debug Overlay ----------------
-
+    /*
     void OnGUI()
     {
         if (!showDebugGUI) return;
@@ -538,6 +538,7 @@ public class MovementController : MonoBehaviour
         GUI.Label(new Rect(10, y + 7 * line, 1000, line), $"Clamped: {isClamped}", style);
         GUI.Label(new Rect(10, y + 8 * line, 1000, line), $"SpeedZone: {(activeZone ? activeZone.name : "keine")}", style);
     }
+    */
 
 }
 

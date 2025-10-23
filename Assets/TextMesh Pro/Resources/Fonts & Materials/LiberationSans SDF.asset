@@ -107,7 +107,7 @@ Material:
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 0.79607844}
+    - _UnderlayColor: {r: 0.19999993, g: 0.19999993, b: 0.19999993, a: 0.44705883}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &11400000
