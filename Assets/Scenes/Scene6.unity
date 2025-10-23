@@ -15816,7 +15816,7 @@ MonoBehaviour:
   soundClips:
   - {fileID: 8300000, guid: 5e418fa4d5d677d4e9a1aede7f70f9a0, type: 3}
   - {fileID: 8300000, guid: a72ea7c91e7a52e45b2134f81c4a5df5, type: 3}
-  maxVolume: 1
+  maxVolume: 0.5
   loop: 1
   loopCooldown: 1
   loopCooldownRandomRange: 0.5
@@ -43152,7 +43152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401484066e1bb88488018c7558503153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crossfadeDuration: 3
+  crossfadeDuration: 5
 --- !u!4 &840864569
 Transform:
   m_ObjectHideFlags: 0
@@ -48776,7 +48776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundClips:
   - {fileID: 8300000, guid: b793fcfa48d37c2468c01842f34e94f0, type: 3}
-  maxVolume: 0.1
+  maxVolume: 0.3
   loop: 1
   loopCooldown: 1
   loopCooldownRandomRange: 0.5
@@ -48799,7 +48799,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -52532,7 +52532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundClips:
   - {fileID: 8300000, guid: 0dc905eb640a67d4bb8c202388319793, type: 3}
-  maxVolume: 1
+  maxVolume: 0.8
   loop: 1
   loopCooldown: 3
   loopCooldownRandomRange: 1
@@ -53105,7 +53105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundClips:
   - {fileID: 8300000, guid: eed4b120343da354a873b8dd13d73a48, type: 3}
-  maxVolume: 1
+  maxVolume: 0.8
   loop: 1
   loopCooldown: 3
   loopCooldownRandomRange: 1
