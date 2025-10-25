@@ -86,7 +86,56 @@ public class MovementController : MonoBehaviour
     }
 
 
+    void Start()
+    {
+        // --- ScrollSpeed persistent laden ---
+        if (PlayerPrefs.HasKey("ScrollSpeed"))
+        {
+            float savedSpeed = PlayerPrefs.GetFloat("ScrollSpeed");
+            scrollSpeedMetersPerPixel = savedSpeed;
+            initialScrollSpeed = savedSpeed;
 
+            if (scrollSpeedSlider != null)
+                scrollSpeedSlider.value = savedSpeed;
+
+            Debug.Log($"[MovementController] ScrollSpeed geladen: {savedSpeed}");
+        }
+        else
+        {
+            // Falls kein gespeicherter Wert existiert, Standardwert setzen
+            PlayerPrefs.SetFloat("ScrollSpeed", scrollSpeedMetersPerPixel);
+            PlayerPrefs.Save();
+            Debug.Log($"[MovementController] ScrollSpeed erstmals gespeichert: {scrollSpeedMetersPerPixel}");
+        }
+
+        // --- Slider-Setup ---
+        if (scrollSpeedSlider != null)
+        {
+            // Slider bewegt → Wert sofort anpassen
+            scrollSpeedSlider.onValueChanged.AddListener(OnSliderChanged);
+        }
+
+        // --- Rest deines bisherigen Start-Codes ---
+        splineDolly = cineCam.GetComponent<CinemachineSplineDolly>();
+        currentDistance = splineDolly.CameraPosition;
+
+        yawExtension = cineCam.GetComponent<YawOverrideExtension>();
+        if (yawExtension == null)
+            yawExtension = cineCam.gameObject.AddComponent<YawOverrideExtension>();
+
+        shakePerlin = cineCam.GetComponentInChildren<CinemachineBasicMultiChannelPerlin>();
+
+        if (speedZones == null || speedZones.Length == 0)
+            speedZones = Object.FindObjectsByType<SpeedZone>(FindObjectsSortMode.None);
+
+        if (animationZones == null || animationZones.Length == 0)
+            animationZones = Object.FindObjectsByType<AnimationZone>(FindObjectsSortMode.None);
+
+        fingersToScroll = Mathf.Clamp(fingersToScroll, 1, 5);
+    }
+
+
+    /*
     void Start()
     {
         if (scrollSpeedSlider != null)
@@ -119,6 +168,7 @@ public class MovementController : MonoBehaviour
 
         fingersToScroll = Mathf.Clamp(fingersToScroll, 1, 5);
     }
+    */
 
 
     void OnDestroy()
@@ -219,42 +269,6 @@ public class MovementController : MonoBehaviour
         }
     }
 
-
-    /*
-    private void HandleSpeedZones(float totalLength)
-    {
-        SpeedZone matchingZone = null;
-        foreach (var zone in speedZones)
-        {
-            if (zone == null || zone.spline != splineDolly.Spline) continue;
-            float start = Mathf.Clamp(zone.startDistance, 0, totalLength);
-            float end = Mathf.Clamp(zone.endDistance, start, totalLength);
-
-            if (currentDistance >= start && currentDistance <= end)
-            {
-                matchingZone = zone;
-                break;
-            }
-        }
-
-        if (matchingZone != null && matchingZone != activeZone)
-        {
-            if (scrollSpeedCoroutine != null) StopCoroutine(scrollSpeedCoroutine);
-            scrollSpeedCoroutine = StartCoroutine(ChangeScrollSpeedSmoothly(
-                matchingZone.newScrollSpeed, matchingZone.easeDuration, matchingZone.ease));
-            activeZone = matchingZone;
-        }
-        else if (matchingZone == null && activeZone != null && activeZone.resetOnExit)
-        {
-            if (scrollSpeedCoroutine != null) StopCoroutine(scrollSpeedCoroutine);
-            float resetTo = activeZone.defaultSpeed > 0 ? activeZone.defaultSpeed : initialScrollSpeed;
-            scrollSpeedCoroutine = StartCoroutine(ChangeScrollSpeedSmoothly(
-                resetTo, activeZone.resetEaseDuration, activeZone.resetEase));
-            activeZone = null;
-        }
-    }
-
-    */
 
     private void HandleAnimationZones()
     {
@@ -513,32 +527,6 @@ public class MovementController : MonoBehaviour
 
 
 
-    // ---------------- Debug Overlay ----------------
-    /*
-    void OnGUI()
-    {
-        if (!showDebugGUI) return;
-
-        GUIStyle style = new GUIStyle(GUI.skin.label)
-        {
-            fontSize = 18,
-            normal = { textColor = Color.white }
-        };
-
-        float y = 10f;
-        float line = 22f;
-
-        GUI.Label(new Rect(10, y + 0 * line, 1000, line), $"Option: {(useHoldToLook ? "B (Hold-to-Look)" : "A (Sofort-Look)")}", style);
-        GUI.Label(new Rect(10, y + 1 * line, 1000, line), $"Active Touches: {ETouch.Touch.activeTouches.Count}", style);
-        GUI.Label(new Rect(10, y + 2 * line, 1000, line), $"Hold Active: {holdLookActive}", style);
-        GUI.Label(new Rect(10, y + 3 * line, 1000, line), $"Scroll Velocity: {scrollVelocity:F2}", style);
-        GUI.Label(new Rect(10, y + 4 * line, 1000, line), $"Scroll Speed: {scrollSpeedMetersPerPixel:F4}", style);
-        GUI.Label(new Rect(10, y + 5 * line, 1000, line), $"Distance: {currentDistance:F2}", style);
-        GUI.Label(new Rect(10, y + 6 * line, 1000, line), $"Yaw: {yawExtension?.yawOverride:F2}", style);
-        GUI.Label(new Rect(10, y + 7 * line, 1000, line), $"Clamped: {isClamped}", style);
-        GUI.Label(new Rect(10, y + 8 * line, 1000, line), $"SpeedZone: {(activeZone ? activeZone.name : "keine")}", style);
-    }
-    */
 
 }
 
